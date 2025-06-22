@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+</head>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav {
+      width: 200px;
+      background-color: #222;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding-top: 60px;
+      box-sizing: border-box;
+      transition: width 0.3s ease;
+      overflow: hidden;
+    }
+    nav.collapsed {
+      width: 60px;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav ul li {
+      padding: 1em;
+      border-bottom: 1px solid #444;
+      white-space: nowrap;
+    }
+    nav ul li:hover {
+      background-color: #444;
+      cursor: pointer;
+    }
+    .toggle-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 0.5em 1em;
+      cursor: pointer;
+    }
+    .content {
+      margin-left: 200px;
+      width: 100%;
+      transition: margin-left 0.3s ease;
+    }
+    nav.collapsed ~ .content {
+      margin-left: 60px;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    main {
+      padding: 2em;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+  </style>
+<body>
+  <h1>Fale Conosco</h1>
+  <p>Entre em contato conosco pelo formulário ou informações abaixo.</p>
+  <a href="inicio.html">Voltar</a>
+</body>
+<body>
+  <nav id="sidebar">
+    <button class="toggle-button" onclick="toggleMenu()">☰</button>
+    <ul>
+      <li onclick="location.href='inicio.html'">Início</li>
+      <li onclick="location.href='sobre.html'">Sobre</li>
+      <li onclick="location.href='servicos.html'">Serviços</li>
+      <li onclick="location.href='contato.html'">Contato</li>
+    </ul>
+  </nav>
+  <div class="content">
+    <header>
+      <h1>Bem-vindo ao meu site!</h1>
+    </header>
+    <main>
+      <p>Esse é um site simples criado em HTML e CSS.</p>
+    </main>
+    <footer>
+      <p>&copy; 2025 Kennedy Miranda</p>
+    </footer>
+  </div>
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector("nav");
+      nav.classList.toggle("collapsed");
+    }
+  </script>
+</body>
+</html>
